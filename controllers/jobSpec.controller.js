@@ -16,7 +16,6 @@ const getJobSpecs = async (req, res) => {
   }
 };
 
-
 const createJobSpec = async (req, res) => {
   console.log(req.body);
   const {
@@ -27,6 +26,7 @@ const createJobSpec = async (req, res) => {
     client,
     datePlaced,
     dateExpire,
+    location,
   } = req.body;
   const newJobSpec = new JobSpecs({
     jobTitle,
@@ -36,6 +36,7 @@ const createJobSpec = async (req, res) => {
     client,
     datePlaced,
     dateExpire,
+    location,
   });
 
   try {
